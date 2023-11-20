@@ -7,20 +7,18 @@ import "bulma/css/bulma.css";
 import NavBar from "./components/Navbar";
 import ItemListContainer from "./components/ItemListContainer";
 import { IoCart } from "react-icons/io5";
-
+import "./App.css";
 function App(){
   //primer enfoque pero no muy bien laburado, queda muy extenso  
     return (
 
-        <div>
-            <section className="hero is-success">
-                <div className="hero-body">
-                    <h1 className="title">Bienvenidos a TAKE IT </h1>
-                </div>
-            </section>
-        <div>
+    <div>
+            <div>
+        
         <NavBar> </NavBar>    
-        <ItemListContainer greeting></ItemListContainer>
+        <ItemListContainer greeting={"Hola"}></ItemListContainer>
+        <ItemListContainer greeting={"chau"}></ItemListContainer>
+        <ItemListContainer greeting={"chau x 2"}></ItemListContainer>
         </div>
         
             <div className="container">
