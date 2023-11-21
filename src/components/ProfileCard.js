@@ -1,8 +1,17 @@
-
+import { useState } from "react";
 
 function ProfileCard(props){
 
     const { titulo, arroba, img} = props;
+
+        const [count , setcount ] = useState(0);
+
+    function handleClickSuma(){
+                setcount(count+1);
+    }
+    function handleClickResta(){
+        setcount(count-1);
+}
 
     return (
 
@@ -17,9 +26,23 @@ function ProfileCard(props){
                 <h3 className="title is-4">Titulo: {titulo}</h3>
             <p className="subtitle is-4">{arroba}</p>
                 </div>
-                
+            <div className="columns"> 
+            <div className="column is-4">
+            <button onClick={handleClickSuma} className="button is-primary full-width is-fullwidth">
+                <p>+</p>
+            </button>
             </div>
-                       
+            <div className="column">
+            <p className="subtitle">Likes: {count}</p>
+            </div>
+            <div className="column">
+            <button onClick={handleClickResta} className="button is-danger full-width is-fullwidth"> 
+            <p>-</p>
+            </button>
+                 
+                </div>     
+            </div>
+            </div>           
         </div>
     )
  

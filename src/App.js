@@ -9,16 +9,14 @@ import ItemListContainer from "./components/ItemListContainer";
 import { IoCart } from "react-icons/io5";
 import "./App.css";
 function App(){
-  //primer enfoque pero no muy bien laburado, queda muy extenso  
+      //primer enfoque pero no muy bien laburado, queda muy extenso  
     return (
 
     <div>
             <div>
         
         <NavBar> </NavBar>    
-        <ItemListContainer greeting={"Hola"}></ItemListContainer>
-        <ItemListContainer greeting={"chau"}></ItemListContainer>
-        <ItemListContainer greeting={"chau x 2"}></ItemListContainer>
+        <ItemListContainer greeting></ItemListContainer>
         </div>
         
             <div className="container">
