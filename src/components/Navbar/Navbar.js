@@ -28,29 +28,26 @@ const NavBar = () => {
           </a>
         </div>
 
-        <div id="navbarBasicExample" className="navbar-menu">
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
           <div className="navbar-start">
-            <Link to="/" className="navbar-item">
+            <Link to="/" className="navbar-item has-text-weight-bold">
               Home
             </Link>
 
             <div className="navbar-item has-dropdown is-hoverable">
-              <a href="#" className="navbar-link">
-                Categorias
+              <a href="#" className="navbar-link has-text-weight-bold">
+                Categories
               </a>
 
               <div className="navbar-dropdown">
-                <Link to="/category/electronics" className="navbar-item">
+                <Link to="/category/motores" className="navbar-item">
+                  Motors
+                </Link>
+                <Link to="/category/electronica" className="navbar-item">
                   Electronics
                 </Link>
-                <Link to="/category/jewelery" className="navbar-item">
-                  jewelery
-                </Link>
-                <Link to="/category/men's clothing" className="navbar-item">
-                  men's clothing
-                </Link>
-                <Link to="/category/women's clothing" className="navbar-item">
-                  women's clothing
+                <Link to="/category/accesorios" className="navbar-item">
+                  Accesories
                 </Link>
               </div>
             </div>

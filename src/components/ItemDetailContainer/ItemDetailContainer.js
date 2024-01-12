@@ -2,18 +2,17 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useProductsContext } from "../../context/ProductsContext";
 
 const ItemDetailContainer = () => {
   const [product, setProduct] = useState({});
+  const { getProductById } = useProductsContext();
   let { itemId } = useParams();
   console.log(product);
-  const apicall = () => {
-    axios(`https://fakestoreapi.com/products/${itemId}`)
-      .then((res) => setProduct(res.data))
-      .catch((err) => console.log(err));
-  };
+
   useEffect(() => {
-    apicall();
+    const getById = async () => setProduct(await getProductById(itemId));
+    getById();
   }, [itemId]);
   return <ItemDetail product={product} />;
 };
